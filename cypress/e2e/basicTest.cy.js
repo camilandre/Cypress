@@ -63,7 +63,7 @@ describe("basic test", () => {
     cy.contains("option1 clicked").should("not.exist");
   });
 
-  it.only("Check select an option and check that the text appears inside selector", () => {
+  it("Check select an option and check that the text appears inside selector", () => {
     cy.get("select")
       .contains("Select an option")
       .should("exist")
@@ -142,4 +142,9 @@ describe("basic test", () => {
     cy.contains("Checkbox 2 checked").should("not.exist");
     cy.contains("Checkbox 3 checked").should("exist").and("be.visible");
   });
+
+  it.only('check', () => {
+    cy.checkElementsStatusByDataTestId('option1', );
+  });
+
 });

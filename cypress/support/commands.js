@@ -11,6 +11,12 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+
+Cypress.Commands.add('checkElementsStatusByDataTestId', (dataTestId, elemenentStatus) => { 
+    cy,get(`[data-testid = ${dataTestId}]`).should(elemenentStatus);
+    //elementStatus valid values: be.visible/exist/be.enabled/be.checked
+});
+
 //
 //
 // -- This is a child command --
